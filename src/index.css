@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Star background effect */
+.stars {
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: moveStars 20s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes moveStars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 1000px;
+  }
+}
+
+/* Smooth fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
